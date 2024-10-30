@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADHD Task Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login/Signup Page -->
+    <div class="login-signup-container" id="login-signup-container">
+        <div class="form-container">
+            <form id="login-form">
+                <h2>Login</h2>
+                <input type="email" id="login-email" placeholder="Email Id" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="#" id="show-signup">Signup</a></p>
+            </form>
+            <form id="signup-form" style="display: none;">
+                <h2>Signup</h2>
+                <input type="text" id="signup-name" placeholder="Name" required>
+                <input type="number" id="signup-age" placeholder="Age" required>
+                <input type="email" id="signup-email" placeholder="Email Id" required>
+                <input type="password" id="signup-password" placeholder="Create Password" required>
+                <input type="password" id="signup-confirm-password" placeholder="Confirm Password" required>
+                <button type="submit">Signup</button>
+                <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Home Page -->
+    <div class="home-container" id="home-container" style="display: none;">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#" id="show-survey">Survey</a></li>
+                <li><a href="#" id="show-timetable">Timetable</a></li>
+                <li><a href="#" id="show-progress">Week Wise Improvement</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div id="home-content">
+                <h1>Welcome to ADHD Task Management System</h1>
+                <p>Information about ADHD and some motivational messages.</p>
+                <div class="celebrity-adhd">
+                    <h2>Celebrities with ADHD</h2>
+                    <img src="celebrity1.jpeg" alt="Celebrity 1">
+                    <img src="celebrity2.jpeg" alt="Celebrity 2">
+                    <img src="celebrity3.jpeg" alt="Celebrity 3">
+                </div>
+            </div>
+            <div id="survey-content" style="display: none;">
+                <h2>ADHD Survey</h2>
+                <form id="survey-form">
+                    <div class="survey-question">
+                        <label>1. Do you find it difficult to stay focused on tasks?</label>
+                        <select name="question1">
+                            <option value="0">Never</option>
+                            <option value="1">Rarely</option>
+                            <option value="2">Sometimes</option>
+                            <option value="3">Often</option>
+                        </select>
+                    </div>
+                    <div class="survey-question">
+                        <label>2. How often do you have difficulty sustaining your attention while doing something for work, school, a hobby, or fun activity (e.g., remaining focused during lectures, lengthy reading or conversations)?</label>
+                        <select name="question2">
+                            <option value="0">Never</option>
+                            <option value="1">Rarely</option>
+                            <option value="2">Sometimes</option>
+                            <option value="3">Often</option>
+                        </select>
+                    </div>
+                    <div class="survey-question">
+                        <label>3. How often are you easily distracted by external stimuli, like something in your environment or unrelated thoughts?</label>
+                        <select name="question3">
+                            <option value="0">Never</option>
+                            <option value="1">Rarely</option>
+                            <option value="2">Sometimes</option>
+                            <option value="3">Often</option>
+                        </select>
+                    </div>
+                    <div class="survey-question">
+                        <label>4. How often do you avoid, dislike, or are reluctant to engage in tasks that require sustained mental effort or thought?</label>
+                        <select name="question4">
+                            <option value="0">Never</option>
+                            <option value="1">Rarely</option>
+                            <option value="2">Sometimes</option>
+                            <option value="3">Often</option>
+                        </select>
+                    </div>
+                    <div class="survey-question">
+                        <label>5. How often do you have trouble listening to someone, even when they are speaking directly to you — like your mind is somewhere else?</label>
+                        <select name="question5">
+                            <option value="0">Never</option>
+                            <option value="1">Rarely</option>
+                            <option value="2">Sometimes</option>
+                            <option value="3">Often</option>
+                        </select>
+                    </div>
+                    <div class="survey-question">
+                        <label>6. How often do you have difficulty in organizing an activity or task needing to get done (e.g., poor time management, fails to meet deadlines, difficulty managing sequential tasks)?</label>
+                        <select name="question6">
+                            <option value="0">Never</option>
+                            <option value="1">Rarely</option>
+                            <option value="2">Sometimes</option>
+                            <option value="3">Often</option>
+                        </select>
+                    </div>
+                    <div class="survey-question">
+                        <label>7. How often do you fail to give close attention to details, or make careless mistakes in things such as schoolwork, at work, or during other activities?</label>
+                        <select name="question7">
+                            <option value="0">Never</option>
+                            <option value="1">Rarely</option>
+                            <option value="2">Sometimes</option>
+                            <option value="3">Often</option>
+                        </select>
+                    </div>
+                    <div class="survey-question">
+                        <label>8. How often do you forget to do something you do all the time, such as missing an appointment or paying a bill?</label>
+                        <select name="question8">
+                            <option value="0">Never</option>
+                            <option value="1">Rarely</option>
+                            <option value="2">Sometimes</option>
+                            <option value="3">Often</option>
+                        </select>
+                    </div>
+                    <div class="survey-question">
+                        <label>9. How often do you fidget with or tap your hands or feet, or squirm in your seat?</label>
+                        <select name="question9">
+                            <option value="0">Never</option>
+                            <option value="1">Rarely</option>
+                            <option value="2">Sometimes</option>
+                            <option value="3">Often</option>
+                        </select>
+                    </div>
+                    <div class="survey-question">
+                        <label>10. How often do you feel restless -- like you want to get out and do something?</label>
+                        <select name="question10">
+                            <option value="0">Never</option>
+                            <option value="1">Rarely</option>
+                            <option value="2">Sometimes</option>
+                            <option value="3">Often</option>
+                        </select>
+                    </div>
+                    <div class="survey-question">
+                        <label>11. How often do you blurt out an answer before a question has been completed (e.g., completing another person's sentence or can't wait your turn in a conversation)?</label>
+                        <select name="question11">
+                            <option value="0">Never</option>
+                            <option value="1">Rarely</option>
+                            <option value="2">Sometimes</option>
+                            <option value="3">Often</option>
+                        </select>
+                    </div>
+                    <div class="survey-question">
+                        <label>12. How often do you leave your seat in situations when remaining seated is expected (e.g., leaving your place in the office or workplace)?</label>
+                        <select name="question12">
+                            <option value="0">Never</option>
+                            <option value="1">Rarely</option>
+                            <option value="2">Sometimes</option>
+                            <option value="3">Often</option>
+                        </select>
+                    </div>
+                    <div class="survey-question">
+                        <label>13. How often do you feel like you're "on the go," acting as if you're "driven by a motor" (e.g., you're unable to be or uncomfortable being still for an extended period of time, such as in a restaurant or a meeting)?</label>
+                        <select name="question13">
+                            <option value="0">Never</option>
+                            <option value="1">Rarely</option>
+                            <option value="2">Sometimes</option>
+                            <option value="3">Often</option>
+                        </select>
+                    </div>
+                    <div class="survey-question">
+                        <label>14. How often do you have difficulty waiting your turn, such as while waiting in line?</label>
+                        <select name="question14">
+                            <option value="0">Never</option>
+                            <option value="1">Rarely</option>
+                            <option value="2">Sometimes</option>
+                            <option value="3">Often</option>
+                        </select>
+                    </div>
+                    <div class="survey-question">
+                        <label>15. How often are you unable to play or engage in leisurely activities quietly?</label>
+                        <select name="question15">
+                            <option value="0">Never</option>
+                            <option value="1">Rarely</option>
+                            <option value="2">Sometimes</option>
+                            <option value="3">Often</option>
+                        </select>
+                    </div>
+                    <div class="survey-question">
+                        <label>16. How often do you forget to do something you do all the time, such as missing an appointment or paying a bill?</label>
+                        <select name="question16">
+                            <option value="0">Never</option>
+                            <option value="1">Rarely</option>
+                            <option value="2">Sometimes</option>
+                            <option value="3">Often</option>
+                        </select>
+                    </div>
+                    <!-- Survey questions here -->
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div id="timetable-content" style="display: none;">
+                <h2>Your Timetable</h2>
+                <div id="timetable"></div>
+            </div>
+            <div id="progress-content" style="display: none;">
+                <h2>Week Wise Improvement</h2>
+                <canvas id="progress-chart"></canvas>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
